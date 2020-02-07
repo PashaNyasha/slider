@@ -1,0 +1,97 @@
+/* Первый слайд */
+
+
+/* Звенья патогенеза СД2 */
+
+.x-headline {
+    font: 100 20px 'Gotham';
+    margin: 86px 0 0 60px;
+}
+
+.x-headline h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 50px;
+}
+
+.top-row,
+.middle-row,
+.bottom-row {
+    flex-basis: 100%;
+    display: flex;
+}
+
+.xs {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    text-align: center;
+    font: 300 36px 'Lato';
+    align-self: flex-start;
+    margin: auto;
+    position: relative;
+}
+
+.xs .name {
+    font-size: 22.5px;
+    font-weight: 100;
+    position: relative;
+}
+
+.xs .name::before {
+    content: 'β';
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #393e67b6;
+    font-size: 66.5px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.sd2-2 .name::before,
+.sd2-3 .name::before {
+    content: '';
+    background-image: url('../images/sd2/muscle.gif');
+    background-size: 70% 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.sd2-3 .name::before {
+    background-image: url('../images/sd2/liver.gif');
+}
+
+.sd2-2,
+.sd2-3 {
+    align-self: flex-end;
+}
+
+.sd2-n {
+    margin-top: 210px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 19px;
+}
+
+.sd2-n span {
+    margin-top: 20px;
+    padding: 45px 65px;
+    border: 1px solid rgba(255, 255, 255, 0.555);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .main-content {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 150px;
+    }
+}

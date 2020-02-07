@@ -1,0 +1,200 @@
+/* Второй слайд */
+
+.x2 .main-content2 {
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal 20px 'Lato';
+}
+
+.main-content2 table {
+    border-collapse: collapse;
+}
+
+.main-content2 table tr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-content2 table td span {
+    display: table-cell;
+    width: inherit;
+    height: inherit;
+    vertical-align: middle;
+    text-align: center;
+    font: normal 20px 'Lato';
+}
+
+.main-content2 table td img {
+    display: block;
+    margin: 8px auto;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.main-content2 table tr td:not(.mn) {
+    background-color: #393e67b6;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    position: relative;
+}
+
+.main-content2 table tr td .num-name {
+    position: absolute;
+    font: normal 18px 'Lato';
+}
+
+.main-content2 table td .num-name .num {
+    font-size: 36px;
+    width: 100%;
+    display: block;
+}
+
+.t1 .num-name .num,
+.m1 .num-name .num,
+.b1 .num-name .num,
+.t1 .num-name .name,
+.m1 .num-name .name,
+.b1 .num-name .name {
+    text-align: right;
+}
+
+.t2 .num-name .num,
+.b2 .num-name .num,
+.t2 .num-name .name,
+.b2 .num-name .name,
+.b1 .num-name .name,
+.b1 .num-name .num {
+    text-align: center;
+}
+
+.t2 .num-name,
+.b1 .num-name,
+.b2 .num-name,
+.b3 .num-name {
+    width: 100px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+.t3 .num-name .num,
+.m3 .num-name .num,
+.t3 .num-name .name,
+.m3 .num-name .name {
+    text-align: left;
+}
+
+.main-content2 .mn {
+    width: 387.5px;
+    height: 141.5px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.555);
+}
+
+.tl,
+.bl {
+    margin-left: 29px;
+}
+
+.tr,
+.br {
+    margin-right: 29px;
+}
+
+table .top-row {
+    margin-bottom: 30px;
+}
+
+table .bottom-row {
+    margin-top: 30px;
+}
+
+td::before,
+td::after {
+    content: '';
+    position: absolute;
+    font: 100 18px 'Lato';
+}
+
+.t2 span:first-child {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+
+/* Верхняя строка */
+
+.t1 .num-name {
+    top: 10px;
+    left: -170px;
+    width: 150px;
+}
+
+.t2 .num-name {
+    top: -60px;
+}
+
+.t3 .num-name {
+    width: 75px;
+    top: 10px;
+    right: -100px;
+}
+
+
+/* Средняя строка */
+
+.ml {
+    margin-right: 30px;
+}
+
+.mr {
+    margin-left: 30px;
+}
+
+.m1 .num-name {
+    left: -70px;
+    top: 0;
+}
+
+.m3 .num-name {
+    top: 0;
+    left: 80px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Второй слайд */
+    .x2 .main-content2 {
+        margin: 200px auto;
+        font: normal 16px 'Lato';
+    }
+    .main-content2 table td span {
+        font: normal 16px 'Lato';
+    }
+    .main-content2 table tr td .num-name {
+        font: normal 16px 'Lato';
+    }
+    .main-content2 table td .num-name .num {
+        font-size: 30px;
+    }
+    .main-content2 .mn {
+        width: 320px;
+    }
+    table .top-row {
+        margin-bottom: 20px;
+    }
+    table .bottom-row {
+        margin-top: 20px;
+    }
+    .ml {
+        margin-right: 20px;
+    }
+    .mr {
+        margin-left: 20px;
+    }
+}

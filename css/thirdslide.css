@@ -1,0 +1,188 @@
+.three {
+    background-image: url('../images/background/bg3.gif');
+    overflow: hidden;
+}
+
+
+/* Котейнер с горизонтальными слайдами получает ширину 300% */
+
+
+/* Его я буду двигать чтобы показать слайды */
+
+.x-slides {
+    width: 300%;
+    height: inherit;
+    transform: translateX(-66.6%);
+    display: flex;
+    transition: .5s ease;
+}
+
+
+/* Слайды внутри получают ширину 100% */
+
+.x-slide {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 25px;
+    transition: transform .5s ease;
+    font-family: 'Lato-Medium';
+    position: relative;
+    overflow: hidden;
+}
+
+.x-slide .rocks-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+.x-slide .rocks-bg img {
+    position: absolute;
+}
+
+
+/* Фон из камней для первого слайда */
+
+.x1 .rocks-bg img:first-child {
+    width: 211.5px;
+    height: 200px;
+    top: 70%;
+    left: 2%;
+    filter: blur(2px) brightness(50%);
+}
+
+.x1 .rocks-bg img:nth-child(2) {
+    width: 106px;
+    height: 101px;
+    top: 25%;
+    left: 65%;
+    transform: rotate(65deg);
+    opacity: .5;
+}
+
+.x1 .rocks-bg img:last-child {
+    width: 38px;
+    height: 38px;
+    top: 15%;
+    left: 88%;
+    transform: rotate(-15deg);
+    opacity: .5;
+}
+
+
+/* Фон из камней для второго слайда */
+
+.x2 .rocks-bg img:first-child {
+    width: 106px;
+    height: 101px;
+    top: 31%;
+    left: .5%;
+    transform: rotate(65deg);
+    opacity: .5;
+}
+
+.x2 .rocks-bg img:nth-child(2) {
+    width: 38px;
+    height: 38px;
+    top: 12%;
+    left: 44%;
+    transform: rotate(-15deg);
+    opacity: .5;
+}
+
+.x2 .rocks-bg img:last-child {
+    width: 211.5px;
+    height: 196.5px;
+    top: 73.5%;
+    left: 77%;
+    transform: rotate(-3deg);
+    filter: blur(3px);
+    opacity: .5;
+}
+
+
+/* Фон из камней для третьего слайда */
+
+.x3 .rocks-bg img:first-child {
+    width: 37.5px;
+    height: 38.5px;
+    top: 10%;
+    left: 0%;
+    transform: rotate(-15deg);
+    opacity: .5;
+}
+
+.x3 .rocks-bg img:nth-child(2) {
+    width: 187.5px;
+    height: 197.5px;
+    top: 77%;
+    left: 5%;
+    transform: rotate(-15deg);
+    opacity: .5;
+    filter: blur(3px);
+}
+
+.x3 .rocks-bg img:last-child {
+    width: 106.5px;
+    height: 101.5px;
+    top: 25%;
+    left: 91%;
+    transform: rotate(65deg);
+    opacity: .5;
+}
+
+
+/* Полоска прокрутки */
+
+#range-label {
+    z-index: 1;
+    align-self: flex-end;
+    margin: 0 auto 50px auto;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -319px;
+}
+
+#range {
+    -webkit-appearance: none;
+    width: 638px;
+    height: 15px;
+    background: #43506363;
+    outline: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-image: url('/images/range-thumb/rt.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 60px;
+    transition: .5s ease;
+}
+
+
+/* Индикатор заполнения полосы */
+
+.full-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 15px;
+    background: #d1eaff;
+    z-index: -1;
+}
+
+.years {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font: normal 20px 'Gotham';
+}
